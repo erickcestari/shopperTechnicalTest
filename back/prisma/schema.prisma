@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Product {
-  code        BigInt @id
+  id          BigInt @id @map("code")
   name        String
   costPrice   Float  @map("cost_price")
   salesPrice  Float  @map("sales_price")
@@ -24,8 +24,8 @@ model Pack {
   packId    BigInt @map("pack_id")
   quantity  Int    @map("qty")
 
-  pack    Product @relation("PackProduct", fields: [packId], references: [code])
-  product Product @relation("ProductPack", fields: [productId], references: [code])
+  pack    Product @relation("PackProduct", fields: [packId], references: [id])
+  product Product @relation("ProductPack", fields: [productId], references: [id])
 
   @@map("packs")
 }
