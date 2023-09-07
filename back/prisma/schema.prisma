@@ -8,24 +8,24 @@ datasource db {
 }
 
 model Product {
-  id          BigInt @id @map("code")
-  name        String
-  costPrice   Float  @map("cost_price")
-  salesPrice  Float  @map("sales_price")
-  PackProduct Pack[] @relation("PackProduct")
-  ProductPack Pack[] @relation("ProductPack")
+  code         BigInt @id
+  name         String
+  cost_price   Float
+  sales_price  Float
+  pack_product Pack[] @relation("pack_product")
+  product_pack Pack[] @relation("product_pack")
 
   @@map("products")
 }
 
 model Pack {
-  id        BigInt @id
-  productId BigInt @map("product_id")
-  packId    BigInt @map("pack_id")
-  quantity  Int    @map("qty")
+  id         BigInt @id
+  product_id BigInt
+  pack_id    BigInt
+  qty        Int
 
-  pack    Product @relation("PackProduct", fields: [packId], references: [id])
-  product Product @relation("ProductPack", fields: [productId], references: [id])
+  pack    Product @relation("pack_product", fields: [pack_id], references: [code])
+  product Product @relation("product_pack", fields: [product_id], references: [code])
 
   @@map("packs")
 }

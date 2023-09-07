@@ -8,10 +8,10 @@ export class ProductRepository {
     return await prisma.product.findMany();
   }
 
-  async getById(id: number) {
+  async getById(code: number) {
     return await prisma.product.findUnique({
       where: {
-        id
+        code
       }
     });
   }
@@ -22,19 +22,19 @@ export class ProductRepository {
     });
   }
 
-  async update(id: number, data: Prisma.ProductUncheckedUpdateInput) {
+  async update(code: number, data: Prisma.ProductUncheckedUpdateInput) {
     return await prisma.product.update({
       where: {
-        id
+        code
       },
       data
     });
   }
 
-  async delete(id: number) {
+  async delete(code: number) {
     return await prisma.product.delete({
       where: {
-        id
+        code
       }
     });
   }
