@@ -27,7 +27,9 @@ export class ProductRepository {
       where: {
         code
       },
-      data
+      data: {
+        ...data
+      }
     });
   }
 

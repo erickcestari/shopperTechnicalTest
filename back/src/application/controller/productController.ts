@@ -9,8 +9,8 @@ export class ProductController {
   ) {
     try {
       const service = new ProductService()
-      const listConversation = await service.get()
-      return response.status(200).send(listConversation)
+      const products = await service.get()
+      return response.status(200).send(products)
     } catch (error) {
       console.log(error)
       next(error)
