@@ -4,6 +4,7 @@
 Clone o projeto e instale as dependências com os seguintes comandos:
 ```bash
   git clone https://github.com/erickcestari/shopperTechnicalTest.git
+  cd shopperTechnicalTest
   cd front
   yarn install or npm i
   cd ../back
