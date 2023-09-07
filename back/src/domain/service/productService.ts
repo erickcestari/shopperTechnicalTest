@@ -87,12 +87,9 @@ export class ProductService {
         const newPrice = Number(data.new_price) / Number(pack.qty)
         await productRepository.update(Number(pack.product_id), { sales_price: newPrice });
       }
-
-
     }
 
     const products = await productRepository.get();
-
     const displayProducts = products.map((product) => ({ ...product, code: product.code.toString() }));
 
     return displayProducts;
