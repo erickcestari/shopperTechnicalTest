@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx ./src/server.ts watch",
+    "dev": "ts-node ./src/server.ts --watch",
     "fill": "tsx ./src/utils/fillTable.ts"
   },
   "keywords": [],

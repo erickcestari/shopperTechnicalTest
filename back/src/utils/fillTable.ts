@@ -5,7 +5,7 @@ async function main() {
   await prisma.$executeRaw`DELETE FROM packs`;
 
   await prisma.$executeRaw`DELETE FROM products`;
-
+  
   await prisma.product.createMany({
     data: [
       {

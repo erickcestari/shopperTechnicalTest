@@ -7,8 +7,6 @@ const dataProductsSchema = z.array(z.object({
   new_price: z.coerce.number(),
 }))
 
-
-
 type DataProducts = z.infer<typeof dataProductsSchema>
 
 export class ProductService {
@@ -57,24 +55,46 @@ export class ProductService {
     const productRepository = new ProductRepository();
     const packRepository = new PackRepository();
     const dataProductsValidated = dataProductsSchema.parse(dataProducts);
-  
+
     for (const data of dataProductsValidated) {
-      // Recupere o produto ou pacote pelo código do produto
       const product = await productRepository.getById(data.product_code);
-  
+
       if (!product) {
         throw new Error('Produto não encontrado');
       }
-  
+
       await productRepository.update(data.product_code, { sales_price: data.new_price });
 
-      const pack = await packRepository.getPackByPackId(data.product_code)
+      const packs = await packRepository.getPackByPackId(data.product_code)
+
+      if (packs.length == 0) {
+        const packs = await packRepository.getPackByProductId(data.product_code)
+        for (const pack of packs) {
+          let newPrice = 0
+          const packWithMoreProducts = await packRepository.getPackByPackId(Number(pack.pack_id))
+          for (const packWithMoreProduct of packWithMoreProducts) {
+            const product = await productRepository.getById(Number(packWithMoreProduct.product_id))
+            if (product) {
+              newPrice += Number(product.sales_price) * Number(packWithMoreProduct.qty)
+            }
+          }
+          await productRepository.update(Number(pack.pack_id), { sales_price: newPrice });
+        }
+        continue
+      }
+      if (packs.length == 1) {
+        const pack = packs[0]
+        const newPrice = Number(data.new_price) / Number(pack.qty)
+        await productRepository.update(Number(pack.product_id), { sales_price: newPrice });
+      }
+
+
     }
-  
+
     const products = await productRepository.get();
-  
+
     const displayProducts = products.map((product) => ({ ...product, code: product.code.toString() }));
-  
+
     return displayProducts;
   }
 }
