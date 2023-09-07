@@ -8,4 +8,12 @@ router.route('/').get(
   controller.get,
 )
 
+router.route('/').put(
+  controller.update,
+)
+
+router.route('/validate').post(
+  controller.validate,
+)
+
 export default router

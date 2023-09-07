@@ -19,7 +19,7 @@ model Product {
 }
 
 model Pack {
-  id         BigInt @id
+  id         BigInt @id @default(autoincrement())
   product_id BigInt
   pack_id    BigInt
   qty        Int
