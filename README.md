@@ -9,7 +9,26 @@
 
 4. Relatórios e Logs: O sistema gera relatórios detalhados das importações, destacando eventuais problemas encontrados durante o processo. Também mantém registros de logs para fins de auditoria.
 
+## Requisitos
+
+- NodeJs
+- Yarn ou npm
+- Docker
+
 ## Instalação
+### NodeJs e NPM
+
+Para instalar o NodeJs e o npm, acesse o site oficial e siga as instruções de instalação: https://nodejs.org/en/download/
+
+### Dcoker
+
+Para instalar o Docker, acesse o site oficial e siga as instruções de instalação: https://docs.docker.com/get-docker/
+
+### Yarn (opcional)
+
+Para instalar o Yarn, acesse o site oficial e siga as instruções de instalação: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+
+## Configuração
 Clone o projeto e instale as dependências com os seguintes comandos:
 ```bash
   git clone https://github.com/erickcestari/shopperTechnicalTest.git
