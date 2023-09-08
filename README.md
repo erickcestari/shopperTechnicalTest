@@ -29,7 +29,7 @@ Para instalar o Docker, acesse o site oficial e siga as instruções de instala�
 Para instalar o Yarn, acesse o site oficial e siga as instruções de instalação: https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
 
 ## Configuração
-Clone o projeto e instale as dependências com os seguintes comandos:
+### Clone o projeto e instale as dependências com os seguintes comandos:
 ```bash
   git clone https://github.com/erickcestari/shopperTechnicalTest.git
   cd shopperTechnicalTest
@@ -41,44 +41,44 @@ Clone o projeto e instale as dependências com os seguintes comandos:
 
 ## Back-end
 
-Adicione as variáveis de ambiente no arquivo .env
+### Adicione as variáveis de ambiente no arquivo .env
 
 ```bash
   DATABASE_URL="mysql://root:root@localhost:3306/db"
   PORT=3333 
 ```
 
-Adicione docker
+### Adicione docker
 ```bash
   docker-compose up -d
 ```
 
-Rode as migrations
+### Rode as migrations
 
 ```bash
   yarn prisma generate dev
 ```
 
-Preencha o banco de dados
+### Preencha o banco de dados
 ```bash
   yarn fill
 ```
 
-Rode o servidor
+### Rode o servidor
 ```bash
   yarn dev or npm run dev
 ```
 
 ## Front-end
 
-Adicione as variáveis de ambiente no arquivo .env
+### Adicione as variáveis de ambiente no arquivo .env
 ```bash
   NEXT_PUBLIC_API_URL=http://localhost:3333
 ```
 
-Rode o servidor
+### Rode o servidor
 ```bash
   yarn dev or npm run dev
 ```
 
-### Finalizado 🥳
+### Agora é só testar a aplicação 🥳
