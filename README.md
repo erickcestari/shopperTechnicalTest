@@ -51,7 +51,7 @@ Para instalar o Yarn, acesse o site oficial e siga as instruções de instalaç�
   PORT=3333 
 ```
 
-### Adicione docker
+### Adicione docker (MySql)
 ```bash
   docker-compose up -d
 ```
@@ -59,17 +59,17 @@ Para instalar o Yarn, acesse o site oficial e siga as instruções de instalaç�
 ### Rode as migrations
 
 ```bash
-  yarn prisma generate dev
+  yarn prisma generate dev ou npx prisma generate dev
 ```
 
 ### Preencha o banco de dados
 ```bash
-  yarn fill
+  yarn fill ou npm run fill
 ```
 
 ### Rode o servidor
 ```bash
-  yarn dev or npm run dev
+  yarn dev ou npm run dev
 ```
 
 ## Front-end
@@ -81,7 +81,7 @@ Para instalar o Yarn, acesse o site oficial e siga as instruções de instalaç�
 
 ### Rode o servidor
 ```bash
-  yarn dev or npm run dev
+  yarn dev ou npm run dev
 ```
 
 ### Agora é só testar a aplicação 🥳
