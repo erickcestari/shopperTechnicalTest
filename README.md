@@ -1,4 +1,4 @@
-# shopperTechnicalTest
+# ShopperTechnicalTest
 
 ## Instalação
 Clone o projeto e instale as dependências com os seguintes comandos:
