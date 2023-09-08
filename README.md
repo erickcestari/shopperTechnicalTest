@@ -20,7 +20,7 @@
 
 Para instalar o NodeJs e o npm, acesse o site oficial e siga as instruções de instalação: https://nodejs.org/en/download/
 
-### Doker
+### Docker
 
 Para instalar o Docker, acesse o site oficial e siga as instruções de instalação: https://docs.docker.com/get-docker/
 
