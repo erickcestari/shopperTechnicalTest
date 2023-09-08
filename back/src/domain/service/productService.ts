@@ -1,6 +1,6 @@
+import { z } from 'zod';
 import { PackRepository } from "../../infra/repository/packRepository";
 import { ProductRepository } from "../../infra/repository/productRepository";
-import { z } from 'zod'
 
 const dataProductsSchema = z.array(z.object({
   product_code: z.coerce.number(),

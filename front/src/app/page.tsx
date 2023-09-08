@@ -1,14 +1,14 @@
 "use client"
 
-import { Button } from "@mui/material"
-import { ChangeEvent, useState, useEffect } from "react"
-import api from "@/utils/api"
-import { DataGrid } from "@mui/x-data-grid/DataGrid"
 import { DisplayData } from "@/components/displayData"
 import MediaPicker from "@/components/mediaPicker"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { CsvDataType, CsvDataValidatedType, ProductType } from "@/types/csvTypes"
+import api from "@/utils/api"
+import { Button } from "@mui/material"
+import { DataGrid } from "@mui/x-data-grid/DataGrid"
+import { ChangeEvent, useEffect, useState } from "react"
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Home() {
   const [nameInput, setNameInput] = useState<string>('')
