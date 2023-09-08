@@ -1,4 +1,7 @@
 # ShopperTechnicalTest
+
+
+
 ## Funcionalidades
 
 1. Importação de Dados: O projeto permite a importação de dados a partir de um arquivo CSV, que contém informações sobre produtos, categorias, preços, estoques e outros relacionados ao e-commerce.
