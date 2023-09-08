@@ -7,7 +7,7 @@
 
 3. Atualização do Banco de Dados: Os dados validados são então atualizados no banco de dados do e-commerce, mantendo-o atualizado e refletindo as últimas alterações.
 
-4. Relatórios e Logs: O sistema gera relatórios detalhados das importações, destacando eventuais problemas encontrados durante o processo. Também mantém registros de logs para fins de auditoria.
+4. Relatórios e Logs: O sistema gera relatórios detalhados das importações, destacando eventuais problemas encontrados durante o processo.
 
 ## Requisitos
 
