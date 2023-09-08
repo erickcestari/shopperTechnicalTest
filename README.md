@@ -84,4 +84,4 @@ Para instalar o Yarn, acesse o site oficial e siga as instruções de instalaç�
   yarn dev ou npm run dev
 ```
 
-### Agora é só testar a aplicação 🥳
+### Agora é só testar a aplicação na url http://localhost:3000 🥳
