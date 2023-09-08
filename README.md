@@ -1,6 +1,6 @@
 # ShopperTechnicalTest
 
-
+![](screen.png)
 
 ## Funcionalidades
 
