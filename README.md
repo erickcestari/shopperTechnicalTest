@@ -10,7 +10,7 @@
 
 3. Atualização do Banco de Dados: Os dados validados são então atualizados no banco de dados do e-commerce, mantendo-o atualizado e refletindo as últimas alterações.
 
-4. Notificações: O sistema gera notificações destracando eventuais problemas encontrados durante o processo.
+4. Notificações: O sistema gera notificações destacando eventuais problemas encontrados durante o processo.
 
 ## Requisitos
 
